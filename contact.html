@@ -13,22 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&amp;display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendMail(){
-        Email.send({
-            SecureToken : "6ebede54-c04d-45cf-8118-5ae66ab78565",
-            To : 'jocelyn.biliec@gmail.com',
-            From : "stalk.jobi@gmail.com",
-            Subject : "Contact form from website",
-            Body : "This is the message :"
-        }).then(
-          message => alert("Mail as been send succesfully")
-        );
-    }
-        </script>
-        
+    <link rel="stylesheet" href="css/style.css">        
 </head>
     <body>
         <main class ="wrapper">
@@ -53,7 +38,7 @@
                     <header>
                         <h1>Contact me </h1>
                     </header>
-                    <form method = "post" class="contact-form">
+                    <form method = "post" action = "mailto:stalk.jobi@gmail.com" class="contact-form">
                         <div class="form-div">
                             <label for="Name">Your name</label>
                             <div class = "input-div">
@@ -73,7 +58,7 @@
                             </div>
                         </div>
                         <div class="form-div">
-                            <input type="button" class="button" value ="Send mail" onclick = "sendMail()" /></button>
+                            <input type="submit" class="button"/>Send mail</button>
                         </div>          
                     </form>
                     </div>
